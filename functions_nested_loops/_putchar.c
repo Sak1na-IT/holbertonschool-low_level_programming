@@ -1,6 +1,11 @@
-#include <unistd.h>
+#include "main.h"
 
-int _putchar(char c)
+int main(void)
 {
-return (write(1, &c, 1));
+
+    print_last_digit(98);    
+    _putchar('\n');
+    print_last_digit(-123);  
+    _putchar('\n');
+    return 0;
 }
