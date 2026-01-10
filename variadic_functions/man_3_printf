@@ -1,0 +1,55 @@
+.TH PRINTF 3 "10 Jan 2026" "1.0" "Standard C Library"
+.SH NAME
+printf \- print formatted output to stdout
+.SH SYNOPSIS
+#include <stdio.h>
+
+int printf(const char *format, ...);
+.SH DESCRIPTION
+The \fBprintf\fP function sends formatted output to \fBstdout\fP.
+
+The \fBformat\fP string contains text to be written to \fBstdout\fP. It can optionally contain embedded format specifiers that are replaced by the values specified in additional arguments. 
+
+Supported format specifiers include:
+.TP
+%c
+Prints a single character.
+.TP
+%s
+Prints a null-terminated string.
+.TP
+%d, %i
+Prints a signed decimal integer.
+.TP
+%u
+Prints an unsigned decimal integer.
+.TP
+%o
+Prints an unsigned octal number.
+.TP
+%x, %X
+Prints an unsigned hexadecimal number (lowercase or uppercase).
+.TP
+%f
+Prints a floating point number.
+.TP
+%%
+Prints a literal percent sign.
+
+.SH RETURN VALUE
+On success, the total number of characters written is returned. On failure, a negative number is returned.
+
+.SH ERRORS
+If an output error occurs, a negative value is returned.
+
+.SH EXAMPLE
+The following example prints a formatted string to standard output:
+
+.nf
+printf("Hello, %s! You have %d new messages.\n", "Alice", 5);
+.fi
+
+.SH SEE ALSO
+fprintf(3), sprintf(3), snprintf(3), dprintf(3)
+.SH AUTHOR
+Sak1na-IT <pasayevasekine844@gmail.com>
